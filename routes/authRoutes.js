@@ -40,7 +40,7 @@ router.post("/register", async (req, res) => {
     }
 });
 
-/* ===== LOGIN ===== */
+
 router.post("/login", async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -67,7 +67,7 @@ router.post("/login", async (req, res) => {
     }
 });
 
-/* ===== PROFILE (PROTECTED) ===== */
+
 router.get("/profile", async (req, res) => {
     if (!req.session.userId) {
         return res.status(401).json({ message: "Unauthorized" });
@@ -77,7 +77,7 @@ router.get("/profile", async (req, res) => {
     res.json(user);
 });
 
-/* ===== LOGOUT ===== */
+
 router.post("/logout", (req, res) => {
     req.session.destroy(() => {
         res.clearCookie("connect.sid");

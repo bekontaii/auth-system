@@ -11,33 +11,27 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# Runtime data
 *.pid
 *.seed
 *.pid.lock
 
-# Coverage directory
 coverage/
 .nyc_output/
 
-# IDE
+
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS
 .DS_Store
 Thumbs.db
 
-# Logs
 logs/
 *.log
 
-# Temp
 tmp/
 temp/
 
-# Build
 dist/
 build/
